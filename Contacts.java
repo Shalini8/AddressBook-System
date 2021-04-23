@@ -8,27 +8,13 @@ public class Contacts{
     String address;
     String city;
     String email;
+    String state;
     int zip;
     Long phoneNumber;
 
-    Scanner sc = new Scanner(System.in);
+   // Scanner sc = new Scanner(System.in);
 
-    public Contacts() {
 
-    }
-
-    @Override
-    public String toString() {
-        return "Contacts{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", address='" + address + '\'' +
-                ", city='" + city + '\'' +
-                ", email='" + email + '\'' +
-                ", zip=" + zip +
-                ", phoneNumber=" + phoneNumber +
-                '}';
-    }
 
 
 
@@ -88,7 +74,16 @@ public class Contacts{
         this.phoneNumber = phoneNumber;
     }
 
-    public Contacts(String firstName, String lastName, String address, String city, String email, int zip, Long phoneNumber) {
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+
+    public Contacts(String firstName, String lastName, String address, String city, String email,String state, int zip, Long phoneNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
@@ -96,9 +91,22 @@ public class Contacts{
         this.email = email;
         this.zip = zip;
         this.phoneNumber = phoneNumber;
+        this.state = state;
     }
 
 
-
+    @Override
+    public String toString() {
+        return "Contacts{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", email='" + email + '\'' +
+                ", state='" + state + '\'' +
+                ", zip=" + zip +
+                ", phoneNumber=" + phoneNumber +
+                '}';
+    }
 }
 
