@@ -185,6 +185,18 @@ public class AddressBook {
             System.out.println("Last Name: " + contact.getLastName());
         }
     }
+    public void CountByCity(String city) {
+        int countPersonInCity = 0;
+        for (Map.Entry<String, LinkedList> entry : addressBookManager.addressbook.entrySet()) {
+            for (int index = 0; index <list.size(); index++){
+                if (list.get(index).getCity().equals(city)){
+                    System.out.println(list.get(index) );
+                    countPersonInCity = index;
+                }
+            }
+        }
+        System.out.println("Total number of people in this city " + city + ": " + countPersonInCity);
+    }
 
     }
 
