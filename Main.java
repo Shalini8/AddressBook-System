@@ -24,7 +24,6 @@ public class Main {
                     case 1:
                             addressBook1.createAddBook();
                             addressBook1.add();
-                           // addressBook1.getContacts();
                         boolean flag1 = true;
                         while (flag1) {
                         System.out.println("[1]: add a contact");

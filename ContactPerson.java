@@ -93,7 +93,6 @@ public class ContactPerson {
 
     }
 
-
     @Override
     public String toString() {
         return "Contacts{" +

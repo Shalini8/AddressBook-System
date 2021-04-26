@@ -16,9 +16,7 @@ public class AddressBookManager {
         System.out.println(addressbook.keySet());
     }
 
-
-
-
+    //@addContact verifies the addressBookName entered by the user. if not matches it will show exception.
     public boolean addContact(String addressBookName, ContactPerson obj) {
         if (addressbook.containsKey(addressBookName) == false) {
             throw new RuntimeException("AddressBook not present");
@@ -27,6 +25,7 @@ public class AddressBookManager {
         addressbook.get(addressBookName).add(obj);
         return true;
     }
+    //@editContact verifies the addressBookName entered by the user. if not matches it will show exception.
 
     public boolean editContact(String addressBookName, ContactPerson obj) {
         if (addressbook.containsKey(addressBookName) == false) {
@@ -42,6 +41,4 @@ public class AddressBookManager {
         contacts.forEach(contact -> System.out.println(contact));
         return contacts;
     }
-
-
 }
