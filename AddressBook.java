@@ -197,7 +197,13 @@ public class AddressBook {
         }
         System.out.println("Total number of people in this city " + city + ": " + countPersonInCity);
     }
-
+    public void sortByName(){
+        System.out.println("AddressBook present are" + addressBookManager.addressbook.keySet());
+        List<ContactPerson> contactPersonList = list.stream().sorted((o1, o2) -> o1.getFirstName().compareTo(o2.getFirstName())).collect(Collectors.toList());
+        contactPersonList.forEach(System.out::println);
     }
+
+
+}
 
 
