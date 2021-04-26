@@ -2,7 +2,7 @@ package com.bridgelabz;
 
 import java.util.Scanner;
 
-public class Contacts{
+public class ContactPerson {
     String firstName;
     String lastName;
     String address;
@@ -12,11 +12,7 @@ public class Contacts{
     int zip;
     Long phoneNumber;
 
-   // Scanner sc = new Scanner(System.in);
-
-
-
-
+    Scanner sc = new Scanner(System.in);
 
     public String getFirstName() {
         return firstName;
@@ -83,7 +79,7 @@ public class Contacts{
     }
 
 
-    public Contacts(String firstName, String lastName, String address, String city, String email,String state, int zip, Long phoneNumber) {
+    public ContactPerson(String firstName, String lastName, String address, String city, String email, String state, int zip, Long phoneNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
@@ -92,6 +88,9 @@ public class Contacts{
         this.zip = zip;
         this.phoneNumber = phoneNumber;
         this.state = state;
+    }
+    public ContactPerson(){
+
     }
 
 
