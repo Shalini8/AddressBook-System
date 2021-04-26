@@ -1,14 +1,22 @@
 package com.bridgelabz;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Scanner;
 import java.util.*;
 import java.util.stream.Collectors;
 
+
 public class AddressBook {
     Scanner scanner = new Scanner(System.in);
-    List<ContactPerson> list = new ArrayList();
+    List<ContactPerson> list = new ArrayList<>();
     AddressBookManager addressBookManager = new AddressBookManager();
+    public HashMap<String, ArrayList<ContactPerson>> personByState = new HashMap<String,ArrayList<ContactPerson> >();
+    public HashMap<String, ArrayList<ContactPerson>> personByCity = new HashMap<String, ArrayList<ContactPerson>>();
 
- //@createAddBook --> it creates a addressbook with a user input name
+
+    //@createAddBook --> it creates a addressbook with a user input name
     public void createAddBook() {
         addressBookManager.createAddressBook();
     }
@@ -65,7 +73,6 @@ public class AddressBook {
                 addressBookManager.addContact(addressBookName, person);
                 list.add(person);
 
-                //System.out.println(list);
             }
         }
             return list;
@@ -124,7 +131,6 @@ public class AddressBook {
                         addressBookManager.editContact(addressBookName, i);
                         list.add(i);
 
-                        //System.out.println(list);
                     }
                 }
                         return list;
@@ -179,5 +185,7 @@ public class AddressBook {
             System.out.println("Last Name: " + contact.getLastName());
         }
     }
-}
+
+    }
+
 
